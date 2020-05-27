@@ -1,0 +1,4 @@
+pattern="([A-ZÁÉÍÓÚÑ][a-záéíóúñ]*\s?){1,}" required title="El nombre(s) debe empezar en mayúscula y continuar en minúscula"><br><!--Checa que el nombre cumpla los requisitos!-->
+pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]*" required title="El Apellido debe empezar en mayúscula y terminar en minúscula"><br>
+pattern="[A-Z]{4}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])([0-9]|[A-Z]){3}" required title="Debe seguir el formato de RFC"><br>
+(?=.*[A-Z])(?=.*[\.,!@#$&*])(?=.*[0-9])(?=.*[a-z]).{10,} //Checa que la contraseña tenga mínimo 10 caracteres, 1 mayúscula, 1 minúscula, 1 número y 1 caracter especial
