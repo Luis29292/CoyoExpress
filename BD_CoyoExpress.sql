@@ -62,6 +62,7 @@ CREATE TABLE `especificación` (
 
 LOCK TABLES `especificación` WRITE;
 /*!40000 ALTER TABLE `especificación` DISABLE KEYS */;
+INSERT INTO `especificación` VALUES (1,'Alumno\r'),(2,'Maestro\r'),(3,'Funcionario\r');
 /*!40000 ALTER TABLE `especificación` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,7 +163,7 @@ CREATE TABLE `tipo` (
   PRIMARY KEY (`id_Tipo`),
   KEY `nomEsp` (`id_Especificación`),
   CONSTRAINT `tipo_ibfk_1` FOREIGN KEY (`id_Especificación`) REFERENCES `especificación` (`id_Especificación`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -171,7 +172,7 @@ CREATE TABLE `tipo` (
 
 LOCK TABLES `tipo` WRITE;
 /*!40000 ALTER TABLE `tipo` DISABLE KEYS */;
-INSERT INTO `tipo` VALUES (1,'Administrador',NULL),(2,'Supervisor',NULL);
+INSERT INTO `tipo` VALUES (1,'Administrador',NULL),(2,'Supervisor',NULL),(4,'Cliente',1),(5,'Cliente',2),(6,'Cliente',3);
 /*!40000 ALTER TABLE `tipo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -212,4 +213,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-29 13:43:34
+-- Dump completed on 2020-05-29 14:17:48
