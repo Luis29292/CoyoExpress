@@ -106,7 +106,7 @@ DROP TABLE IF EXISTS `producto`;
 CREATE TABLE `producto` (
   `Nombre` varchar(20) DEFAULT NULL,
   `Precio` int(3) DEFAULT NULL,
-  `Imagen` varchar(100) DEFAULT NULL,
+  `Imagen` varchar(400) DEFAULT NULL,
   `Cantidad` int(2) DEFAULT NULL,
   `id_Producto` int(2) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_Producto`)
@@ -119,7 +119,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES ('Agua',20,'https://static.diariofemenino.com/pictures/articulos/215000/215301-4.jpg',50,31),('Cafe',25,'https://www.ecestaticos.com/imagestatic/clipping/1b2/113/1b21131793b5003905419eb329e1692f/el-cafe-no',50,32),('Sandwich',30,'https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2018/04/club-sand',50,33),('Papas',15,'https://danzadefogones.com/wp-content/uploads/2020/04/Patatas-Fritas-al-Horno-3.jpg',50,34),('Galletas',18,'https://elgourmet.s3.amazonaws.com/recetas/cover/galle_ipRG4rtdhqbv9V7l1PkHSauUnmf8oD.png',50,35),('Dulces',15,'https://image.freepik.com/foto-gratis/manojo-caramelos-coloridos_23-2147689700.jpg',50,36),('Chilaquiles',35,'https://i.pinimg.com/originals/d2/c9/56/d2c956f20be73e9f70de9b9870c70445.jpg',50,37),('Elote',24,'https://cocinarrecetasdepostres.net/wp-content/uploads/2019/12/Receta-Elote-Autentico-maiz-mexicano-',50,38),('Esquite',22,'https://dam.cocinafacil.com.mx/wp-content/uploads/2018/12/esquite-tradicional.jpg',50,39),('Helado',10,'https://t1.rg.ltmcdn.com/es/images/5/4/0/helado_de_vainilla_casero_74045_orig.jpg',50,40);
+INSERT INTO `producto` VALUES ('Agua',20,'https://static.diariofemenino.com/pictures/articulos/215000/215301-4.jpg',50,31),('Cafe',25,'https://www.ecestaticos.com/imagestatic/clipping/1b2/113/1b21131793b5003905419eb329e1692f/el-cafe-no-es-malo-pero-hasta-que-cantidad-se-puede-tomar.jpg?mtime=1531916182',50,32),('Sandwich',30,'https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2018/04/club-sandwich.jpg',50,33),('Papas',15,'https://danzadefogones.com/wp-content/uploads/2020/04/Patatas-Fritas-al-Horno-3.jpg',50,34),('Galletas',18,'https://elgourmet.s3.amazonaws.com/recetas/cover/galle_ipRG4rtdhqbv9V7l1PkHSauUnmf8oD.png',50,35),('Dulces',15,'https://image.freepik.com/foto-gratis/manojo-caramelos-coloridos_23-2147689700.jpg',50,36),('Chilaquiles',35,'https://i.pinimg.com/originals/d2/c9/56/d2c956f20be73e9f70de9b9870c70445.jpg',50,37),('Elote',24,'https://cocinarrecetasdepostres.net/wp-content/uploads/2019/12/Receta-Elote-Autentico-maiz-mexicano-en-la-mazorca.jpg',50,38),('Esquite',22,'https://dam.cocinafacil.com.mx/wp-content/uploads/2018/12/esquite-tradicional.jpg',50,39),('Helado',10,'https://t1.rg.ltmcdn.com/es/images/5/4/0/helado_de_vainilla_casero_74045_orig.jpg',50,40);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -210,4 +210,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-28 19:36:50
+-- Dump completed on 2020-05-28 20:38:29
