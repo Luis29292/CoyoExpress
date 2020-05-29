@@ -51,3 +51,15 @@ legend{
 h2{
   font-family: 'Raleway', sans-serif;
 }
+label{
+  font-family: 'Raleway', sans-serif;
+}
+a{
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  width: 89%;
+}
