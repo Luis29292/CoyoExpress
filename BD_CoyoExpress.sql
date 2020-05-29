@@ -29,7 +29,7 @@ CREATE TABLE `dirección` (
   PRIMARY KEY (`id_Dirección`),
   KEY `Sección` (`Sección`),
   CONSTRAINT `dirección_ibfk_1` FOREIGN KEY (`Sección`) REFERENCES `sección` (`id_Sección`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `dirección` (
 
 LOCK TABLES `dirección` WRITE;
 /*!40000 ALTER TABLE `dirección` DISABLE KEYS */;
+INSERT INTO `dirección` VALUES (1,'C-3',4),(2,'C-4',4),(3,'C-5',4),(4,'C-6',4),(5,'C-7',4),(6,'C-8',4),(7,'C-101',4),(8,'C-102',4),(9,'C-103',4),(10,'C-104',4),(11,'C-105',4),(12,'C-106',4),(13,'C-107',4),(14,'C-108',4),(15,'B-3',5),(16,'B-4',5),(17,'B-5',5),(18,'B-6',5),(19,'B-7',5),(20,'B-8',5),(21,'B-101',5),(22,'B-102',5),(23,'B-103',5),(24,'B-104',5),(25,'B-105',5),(26,'B-106',5),(27,'B-107',5),(28,'B-108',5),(29,'D-3',6),(30,'D-4',6),(31,'D-5',6),(32,'D-6',6),(33,'D-7',6),(34,'D-8',6),(35,'D-101',6),(36,'D-102',6),(37,'D-103',6),(38,'D-104',6),(39,'D-105',6),(40,'D-106',6),(41,'D-107',6),(42,'D-108',6),(43,'Cafeteria',1),(44,'H-4',2),(45,'H-5',2),(46,'H-6',2),(47,'H-7',2),(48,'H-8',2),(49,'H-9',2),(50,'Direccion',3),(51,'Sala de Maestros',3);
 /*!40000 ALTER TABLE `dirección` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,6 +144,7 @@ CREATE TABLE `sección` (
 
 LOCK TABLES `sección` WRITE;
 /*!40000 ALTER TABLE `sección` DISABLE KEYS */;
+INSERT INTO `sección` VALUES (1,'Canchas\r'),(2,'Pimponeras\r'),(3,'Direccion\r'),(4,'Cuartos\r'),(5,'Quintos\r'),(6,'Sextos\r');
 /*!40000 ALTER TABLE `sección` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -210,4 +212,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-28 20:38:29
+-- Dump completed on 2020-05-29 13:43:34
