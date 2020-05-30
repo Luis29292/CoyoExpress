@@ -1,5 +1,5 @@
 <?php
-  $boton = $_POST['boton'];
+  $boton = (isset($_POST['boton'])) ? $_POST['boton']:"";
   echo '<!DOCTYPE html>
         <html lang="en" dir="ltr">
           <head>

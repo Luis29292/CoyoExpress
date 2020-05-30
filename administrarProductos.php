@@ -1,5 +1,5 @@
 <?php
-  $accion = $_POST['accion'];
+  $accion = (isset($_POST['accion'])) ? $_POST['accion']:"";
   echo '<!DOCTYPE html>
         <html lang="en" dir="ltr">
           <head>
@@ -64,6 +64,7 @@
             </form>';
     }
   }
+  echo "<a href='administradores.php'>Regresar</a>";
   echo "</body>
       </html>";
   mysqli_close($conexion); //Aquí cerramos la conexión con la base de datos (CoyoExpress)

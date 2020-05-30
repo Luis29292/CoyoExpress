@@ -2,19 +2,26 @@
   include 'conexion.php';
   if (isset($_POST['nombre']) && isset($_POST['precio']) && isset($_POST['imagen']) && isset($_POST['cantidad']) && isset($_POST['idProducto']))
   {
-    $nombre = $_POST['nombre'];
-    $precio = $_POST['precio'];
-    $imagen = $_POST['imagen'];
-    $cantidad = $_POST['cantidad'];
-    $idProducto = $_POST['idProducto'];
+    $pro=["Nombre","Precio","Imagen","Cantidad"];
+    $mod=[
+      $_POST['nombre'],
+      $_POST['precio'],
+      $_POST['imagen'],
+      $_POST['cantidad'],
+      $_POST['idProducto']];
     if ($conexion)
     {
-      $sql = sprintf("UPDATE producto SET ('%s', '%d', '%s', '%d') WHERE id_Producto = '$idProducto'",
-                            $nombre,
+      //$sql = ("UPDATE producto SET (\"$nombre\", $precio, \"$imagen\", $cantidad) WHERE id_Producto IN (id_Producto)");
+                            /*$nombre,
                             $precio,
                             $imagen,
-                            $cantidad);
-      mysqli_query($conexion, $sql);
+                            $cantidad);*/
+      for ($i=0; $i<4; $i++)
+      {
+        $sql="UPDATE producto SET $pro[$i]=\"$mod[$i]\" WHERE id_Producto IN(32)";
+        mysqli_query($conexion, $sql);
+      }
+
       echo "<label>Producto modificado!</label><br><br>
             <a href='administrarProductos.php'>Regresar</a>";
     }
