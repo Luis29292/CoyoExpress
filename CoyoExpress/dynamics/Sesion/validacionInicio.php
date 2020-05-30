@@ -11,8 +11,25 @@
       $row = mysqli_fetch_array($respuesta); //Con esta función obtenemos en una matriz (asociativa, numérica o ambas) los datos que recibimos de la base
       if ($row == false) //Si la matriz ($row) está vacía...
       {
-        //Cómo mandar un mensaje para que se registre?
-        header('Location: ../dynamics/Registro/registrarse.php'); //Redirigimos al usuario a (registrarse.php) para que se dé de alta antes de iniciar sesión
+        //Imprimimos en pantalla un HTML donde se le pide al usuario que primero se registre antes de iniciar sesión o si ya está registrado que ingrese correctamente sus datos
+        echo "<!DOCTYPE html>
+              <html lang='en'dir='ltr'>
+                <head>
+                  <link rel='stylesheet' href='../../statics/css/iniciarSesion.css'>
+                  <link rel='icon' href='../../statics/img/prepa6.png'>
+                  <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap' rel='stylesheet'>
+                  <meta charset='utf-8'>
+                  <title>Validando...</title>
+                </head>
+                <body>
+                  <div style='width: 200px;'>
+                    <label>Aún no estás registrado!</label><br><br>
+                    <a href='../Registro/registrarse.php'><label>Registrarse</label></a><br><br>
+                    <label>Si ya estás registrado <br> verifica tus datos!</label><br><br>
+                    <a href='../Sesion/iniciarSesion.php'><label>Regresar</label></a>
+                  </div>
+                </body>
+              </html>";
       }
       else //Si la matriz ($row) no está vacía...
       {

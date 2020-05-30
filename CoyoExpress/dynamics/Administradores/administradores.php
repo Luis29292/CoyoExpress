@@ -12,7 +12,7 @@
             <form action="administrar.php" method="post">
               <input type="submit" name="boton" value="Productos"><br><br>
               <input type="submit" name="boton" value="Usuarios"><br><br>
-              <a href="../cerrarSesion.php">Cerrar Sesión</a>
+              <a href="../cerrarSesion.php" style="text-decoration: none; color: #567174"><label style="font-family: \'Raleway\', sans-serif;">Cerrar Sesión</label></a>
             </form>';
   echo '</body>
       </html>';

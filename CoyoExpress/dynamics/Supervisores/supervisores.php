@@ -6,7 +6,7 @@ echo '<!DOCTYPE html>
           <title></title>
         </head>
         <body>
-          <a href="pedidosGen.php">Pedidos</a><br><br>
+          <a href="pedidos.php">Pedidos</a><br><br>
         </body>
       </html>';
 ?>

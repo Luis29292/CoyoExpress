@@ -51,7 +51,7 @@
             </form>';
     }
   }
-  echo "<a href='administradores.php'>Regresar</a>
+  echo "<a href='administradores.php'><label>Regresar</label></a>
       </body>
     </html>";
   mysqli_close($conexion); //Aquí cerramos la conexión con la base de datos (CoyoExpress)

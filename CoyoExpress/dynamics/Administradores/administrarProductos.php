@@ -41,7 +41,6 @@
               <label>Precio: </label><input type="text" name="precio" required><br><br>
               <label>Imagen: </label><input type="text" name="imagen" required><br><br>
               <label>Cantidad: </label><input type="text" name="cantidad" required><br><br>
-              <label>ID del producto: </label><input type="text" name="idProducto" required><br><br>
               <input type="submit" name="agregar" value="Agregar producto"><br><br>
             </form>';
     }
@@ -64,7 +63,7 @@
             </form>';
     }
   }
-  echo "<a href='administradores.php'>Regresar</a>
+  echo "<a href='administradores.php'><label style='font-family: 'Raleway', sans-serif;'>Regresar</label></a>
       </body>
     </html>";
   mysqli_close($conexion); //Aquí cerramos la conexión con la base de datos (CoyoExpress)

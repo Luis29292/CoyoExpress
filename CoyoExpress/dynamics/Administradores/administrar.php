@@ -42,7 +42,7 @@
                 <option value='Eliminar'>Eliminar</option>
               </select><br><br>
               <input type='submit' name='boton' value='Continuar'><br><br>
-              <a href='administradores.php'>Regresar</a>
+              <a href='administradores.php'><label>Regresar</label></a>
             </form>
           </body>
         </html>";
@@ -76,7 +76,7 @@
                 <option value='Eliminar'>Eliminar</option>
               </select><br><br>
               <input type='submit' name='boton' value='Continuar'><br><br>
-              <a href='administradores.php'>Regresar</a>
+              <a href='administradores.php'><label>Regresar</label></a>
             </form>
           </body>
         </html>";
