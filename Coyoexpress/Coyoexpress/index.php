@@ -16,7 +16,11 @@
         <nav>
             <a href="#Somoscoyotes">Inicio</a>
             <a href="#Alimentos">Acerca de alimentos</a>
-            <a href="#">Ingreso</a>
+            <a href="http://localhost/Modulo/Pedidos.php"
+            <?php
+            include 'php/Pedidos.php'
+            ?>
+            >Ingreso</a>
             <a href="#Servicios">Servicios</a>
             <a href="#Contacto">Contacto</a>
         </nav>

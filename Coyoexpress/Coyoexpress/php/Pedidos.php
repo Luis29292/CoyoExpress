@@ -18,6 +18,9 @@ $chilaquiles = 35;
     <meta charset="utf-8">
     <title>Selecciona tu comida</title>
     <link rel="stylesheet" type="text/css" href="Proyecto/Pedidos.css">
+    <?php
+    include '../index.php';
+    ?>
     <style media="screen">
       img{
         width: 100px;
