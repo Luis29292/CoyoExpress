@@ -8,7 +8,7 @@
     if ($conexion) //Si la conexión con la base de datos fue exitosa
     {
 
-      if ($modificacion == "idTipo")
+      if ($modifDatos == "idTipo")
       {
         $sql = "UPDATE usuario SET id_tipo = $modificacion WHERE id_Usuario IN ($idUsuario)";
         mysqli_query($conexion, $sql);
