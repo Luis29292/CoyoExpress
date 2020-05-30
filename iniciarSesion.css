@@ -1,19 +1,16 @@
-body{
-
-}
-.container1{
+.container1{ /*clase que define el diseño del "div" que contiene el logo del sistema*/
   float: left;
   padding: 7% 0% 0% 10%;
 }
-.container2{
+.container2{ /*clase que define el diseño del "div" que contiene los elementos donde se pide información al usuario (formularios)*/
   float: right;
   padding: 13% 15% 0% 0%;
   width: 500px;
 }
-.datos{
+.datos{ /*clase que define el espacio entre los "label" e input (text y password) con fieldset*/
   margin: 0% 0% 0% 3%;
 }
-.enviar{
+.enviar{ /*clase que define el diseño del input (submit) del formulario*/
   background-color: #3D9AAC;
   border: none;
   border-radius: 4px;
@@ -22,14 +19,14 @@ body{
   padding: 14px 20px;
   width: 100%;
 }
-.inputs{
+.inputs{ /*clase que define el diseño de los input (text y password) del formulario*/
   background: none;
   border: none;
   border-bottom: 2px solid;
   font-family: cursive;
   width: 200px;
 }
-.logo{
+.logo{ /*clase que define las dimensiones del logo del sistema*/
   height: 450px;
   width: 450px;
 }
