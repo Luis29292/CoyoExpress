@@ -38,7 +38,10 @@
         $row2 = mysqli_fetch_array($respuesta2); //Con esta función obtenemos en una matriz (asociativa, numérica o ambas) los datos que recibimos de la base
         if ($row2 != false) //Si la matriz ($row2) no está vacía...
         {
-          include '../../inicioSesion.php'; //Incluimos "inicioSesion.php" para iniciar la sesión del usuario
+          session_name("usuario");
+          session_id("12345678");
+          session_start();
+          $_SESSION['numC']=$numCuenta; //Incluimos "inicioSesion.php" para iniciar la sesión del usuario
           header('Location: ../Administradores/administradores.php'); //Redirigimos al usuario a la página de administradores
         }
         $consulta3 = "SELECT id_Usuario FROM usuario WHERE id_Usuario = '$numCuenta' AND id_tipo = 2 AND Contrasena = '$contrasena'"; //Almacenamos la consulta que queremos realizar en $consulta3
@@ -46,7 +49,10 @@
         $row2 = mysqli_fetch_array($respuesta3); //Con esta función obtenemos en una matriz (asociativa, numérica o ambas) los datos que recibimos de la base
         if ($row2 != false) //Si la matriz ($row2) no está vacía...
         {
-          include '../../inicioSesion.php'; //Incluimos "inicioSesion.php" para iniciar la sesión del usuario
+          session_name("usuario");
+          session_id("12345678");
+          session_start();
+          $_SESSION['numC']=$numCuenta; //Incluimos "inicioSesion.php" para iniciar la sesión del usuario
           header('Location: ../Supervisores/supervisores.php'); //Redirigimos al usuario a la página de supervisores
         }
         $consulta4 = "SELECT id_Usuario FROM usuario WHERE id_Usuario = '$numCuenta' AND id_tipo = 4 OR id_tipo = 5 OR id_tipo = 6 AND Contrasena = '$contrasena'"; //Almacenamos la consulta que queremos realizar en $consulta4
@@ -54,7 +60,10 @@
         $row3 = mysqli_fetch_array($respuesta4); //Con esta función obtenemos en una matriz (asociativa, numérica o ambas) los datos que recibimos de la base
         if ($row3 != false) //Si la matriz ($row3) no está vacía...
         {
-          include '../../inicioSesion.php'; //Incluimos "inicioSesion.php" para iniciar la sesión del usuario
+          session_name("usuario");
+          session_id("12345678");
+          session_start();
+          $_SESSION['numC']=$numCuenta; //Incluimos "inicioSesion.php" para iniciar la sesión del usuario
           header('Location: ../principal.php'); //Redirigimos al usuario a la página principal
         }
       }

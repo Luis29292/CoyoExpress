@@ -1,5 +1,8 @@
 <?php
-$nC=318012345; //Sustituir por la sesión!!!!!!
+session_name("usuario");
+session_id("12345678");
+session_start();
+$nC=$_SESSION['numC']; //Sustituir por la sesión!!!!!!
 $producto = $_POST['producto'];
 $direccion = $_POST['direccion'];
 include 'conexion.php'; //Incluimos "conexion.php" para generar la conexión con la base de datos
