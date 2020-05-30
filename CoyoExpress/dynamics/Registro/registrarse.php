@@ -23,7 +23,7 @@
                 <form action="validacionRegistro.php" method="post">
                   <fieldset>
                     <legend><h2>Registrarse</h2></legend>
-                    <label class="datos">Número de Cuenta: </label><input class="inputs" type="text" name="identificador" required><br><br>
+                    <label class="datos">Número de Cuenta: </label><input class="inputs" type="text" name="identificador" required pattern="^3(18|19|20)\d{6}" title="Se debe introducir un número de cuenta que inicie en 318, 319, ó 320 y de 9 dígitos de longitud"><br><br>
                     <label class="datos">Nombre: </label><input class="inputs" type="text" name="nombre" pattern="([A-ZÁÉÍÓÚÑ][a-záéíóúñ]*\s?){1,}" required title="El nombre(s) debe empezar en mayúscula y continuar en minúscula"><br><br>
                     <label class="datos">Apellido Paterno: </label><input class="inputs" type="text" name="apePaterno" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]*" required title="El Apellido debe empezar en mayúscula y terminar en minúscula"><br><br>
                     <label class="datos">Apellido Materno: </label><input class="inputs" type="text" name="apeMaterno" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]*" required title="El Apellido debe empezar en mayúscula y terminar en minúscula"><br><br>
@@ -69,7 +69,7 @@
                 <form action="validacionRegistro.php" method="post">
                   <fieldset>
                     <legend><h2>Registrarse</h2></legend>
-                    <label class="datos">Número de trabajador: </label><input class="inputs" type="text" name="identificador" required><br><br>
+                    <label class="datos">Número de trabajador: </label><input class="inputs" type="text" name="identificador" required pattern="\d{6}" title="El número de trabajador debe tener 6 dígitos"><br><br>
                     <label class="datos">Nombre: </label><input class="inputs" type="text" name="nombre" pattern="([A-ZÁÉÍÓÚÑ][a-záéíóúñ]*\s?){1,}" required title="El nombre(s) debe empezar en mayúscula y continuar en minúscula"><br><br>
                     <label class="datos">Apellido Paterno: </label><input class="inputs" type="text" name="apePaterno" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]*" required title="El Apellido debe empezar en mayúscula y terminar en minúscula"><br><br>
                     <label class="datos">Apellido Materno: </label><input class="inputs" type="text" name="apeMaterno" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]*" required title="El Apellido debe empezar en mayúscula y terminar en minúscula"><br><br>
