@@ -15,7 +15,6 @@
   {
     $consulta = "SELECT * FROM usuario";
     $respuesta = mysqli_query($conexion, $consulta);
-    $row = mysqli_fetch_array($respuesta);
     echo "<table>
             <th>ID usuario</th>
             <th>Tipo de usuario</th>
