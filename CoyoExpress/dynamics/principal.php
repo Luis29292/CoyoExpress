@@ -10,6 +10,7 @@ echo '<!DOCTYPE html>
         </head>
         <body>
           <a href="../dynamics/menu.php"><label>Hacer un pedido</label></a><br><br>
+          <a href="./historial.php"><label>Ver historial de pedidos</label></a><br><br>
           <a href="../dynamics/CerrarSesion.php"><label>Cerrar sesion</label></a>
         </body>';
 ?>
