@@ -18,7 +18,7 @@
               </head>
               <body>
                 <label>Usuario eliminado!</label><br><br>
-                <a href='administrarProductos.php'><label>Regresar</label></a>
+                <a href='administrarUsuarios.php'><label>Regresar</label></a>
               </body>
             </html>";
     }
