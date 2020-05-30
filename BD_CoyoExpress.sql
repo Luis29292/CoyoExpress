@@ -74,7 +74,7 @@ DROP TABLE IF EXISTS `pedido`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pedido` (
-  `id_Pedido` int(8) NOT NULL,
+  `id_Pedido` int(8) NOT NULL AUTO_INCREMENT,
   `id_usuario` int(13) DEFAULT NULL,
   `id_Producto` int(2) DEFAULT NULL,
   `id_Direccion` int(2) DEFAULT NULL,
@@ -86,7 +86,7 @@ CREATE TABLE `pedido` (
   CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_Usuario`),
   CONSTRAINT `pedido_ibfk_2` FOREIGN KEY (`id_Producto`) REFERENCES `producto` (`id_Producto`),
   CONSTRAINT `pedido_ibfk_3` FOREIGN KEY (`id_Direccion`) REFERENCES `dirección` (`id_Dirección`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,6 +95,7 @@ CREATE TABLE `pedido` (
 
 LOCK TABLES `pedido` WRITE;
 /*!40000 ALTER TABLE `pedido` DISABLE KEYS */;
+INSERT INTO `pedido` VALUES (4,318012345,32,47,NULL),(5,318012345,31,43,NULL),(6,318012345,31,1,NULL),(7,318012345,31,18,NULL),(8,318012345,33,17,NULL);
 /*!40000 ALTER TABLE `pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,7 +113,7 @@ CREATE TABLE `producto` (
   `Cantidad` int(2) DEFAULT NULL,
   `id_Producto` int(2) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id_Producto`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -200,7 +201,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (318023155,1,'Luis','4dm1n15tr4d0r.');
+INSERT INTO `usuario` VALUES (318012345,6,'4','cl13nt3.'),(318023155,1,'Luis','4dm1n15tr4d0r.');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -213,4 +214,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-29 14:17:48
+-- Dump completed on 2020-05-30 15:23:31
