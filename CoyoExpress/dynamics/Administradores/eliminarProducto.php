@@ -1,5 +1,5 @@
 <?php
-  include 'conexion.php';
+  include '../conexion.php'; //Incluimos "conexion.php" para generar la conexión con la base de datos
   if (isset($_POST['idProducto']))
   {
     $idProducto = $_POST['idProducto'];

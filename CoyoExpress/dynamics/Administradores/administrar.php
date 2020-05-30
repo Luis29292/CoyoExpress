@@ -1,16 +1,16 @@
 <?php
-  $boton = (isset($_POST['boton'])) ? $_POST['boton']:"";
+  $boton = (isset($_POST['boton'])) ? $_POST['boton']:""; //Ternario
   echo '<!DOCTYPE html>
         <html lang="en" dir="ltr">
           <head>
-            <link rel="stylesheet" href="administradores.css">
-            <link rel="icon" href="prepa6.png">
+            <link rel="stylesheet" href="../../statics/css/administradores.css">
+            <link rel="icon" href="../../statics/img/prepa6.png">
             <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
             <meta charset="utf-8">
             <title>Coyo Express: Productos</title>
           </head>
           <body>';
-  include 'conexion.php';
+  include '../conexion.php';
   if ($boton == "Productos")
   {
     if ($conexion)
@@ -36,7 +36,7 @@
       }
       echo "</table><br><br>
             <form action='administrarProductos.php' method='post'>
-              <select name='accion'>
+              <select name='accion' required>
                 <option value='Agregar'>Agregar</option>
                 <option value='Modificar'>Modificar</option>
                 <option value='Eliminar'>Eliminar</option>
@@ -71,8 +71,7 @@
       }
       echo "</table>
             <form action='administrarUsuarios.php' method='post'>
-              <select name='accion'>
-                <option value='Agregar'>Agregar</option>
+              <select name='accion' required>
                 <option value='Modificar'>Modificar</option>
                 <option value='Eliminar'>Eliminar</option>
               </select><br><br>

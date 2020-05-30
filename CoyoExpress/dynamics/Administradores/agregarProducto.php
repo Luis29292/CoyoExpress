@@ -1,5 +1,5 @@
 <?php
-  include 'conexion.php';
+  include '../conexion.php';
   if (isset($_POST['nombre']) && isset($_POST['precio']) && isset($_POST['imagen']) && isset($_POST['cantidad']) && isset($_POST['idProducto']))
   {
     $nombre = $_POST['nombre'];

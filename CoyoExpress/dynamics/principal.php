@@ -1,6 +1,6 @@
 <?php
   //Agregar esto al contenido de la página principal
   echo '<body>
-          <a href="CerrarSesion.php">Cerrar sesion</a>
+          <a href="../dynamics/CerrarSesion.php">Cerrar sesion</a>
         </body>';
 ?>

@@ -4,8 +4,8 @@
   echo '<!DOCTYPE html>
         <html lang="en" dir="ltr">
           <head>
-            <link rel="stylesheet" href="registrarse.css">
-            <link rel="icon" href="prepa6.png">
+            <link rel="stylesheet" href="../../statics/css/registrarse.css">
+            <link rel="icon" href="../../statics/img/prepa6.png">
             <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
             <meta charset="utf-8">
             <title>Coyo Express: Registro</title>
@@ -17,7 +17,7 @@
     {
       echo '<body>
               <div class="container1">
-                <img class="logo" src="logo.png" alt="Coyo Express">
+                <img class="logo" src="../../statics/img/logo.png" alt="Coyo Express">
               </div>
               <div class="container2">
                 <form action="validacionRegistro.php" method="post">
@@ -30,7 +30,7 @@
                     <label class="datos">Contraseña: </label><input class="inputs" type="password" name="contra" required pattern="(?=.*[A-Z])(?=.*[\.,!@#$&*])(?=.*[0-9])(?=.*[a-z]).{10,}"><br><br>
                     <label class="datos">¡Gracias por preferir Coyo Express!</label><br><br>
                     <input class="enviar" type="submit" name="enviar" value="Enviar"><br><br>
-                    <a href="iniciarSesion.php"><label>¿Ya tienes una cuenta con nosotros? Inicia Sesión!</label></a>
+                    <a href="../Sesion/iniciarSesion.php"><label>¿Ya tienes una cuenta con nosotros? Inicia Sesión!</label></a>
                   </fieldset>
                 </form>
               </div>
@@ -40,7 +40,7 @@
     {
       echo '<body>
               <div class="container1">
-                <img class="logo" src="logo.png" alt="Coyo Express">
+                <img class="logo" src="../../statics/img/logo.png" alt="Coyo Express">
               </div>
               <div class="container2">
                 <form action="validacionRegistro.php" method="post">
@@ -53,7 +53,7 @@
                     <label class="datos">Contraseña: </label><input class="inputs" type="password" name="contra" required pattern="(?=.*[A-Z])(?=.*[\.,!@#$&*])(?=.*[0-9])(?=.*[a-z]).{10,}"><br><br>
                     <label class="datos">¡Gracias por preferir Coyo Express!</label><br><br>
                     <input class="enviar" type="submit" name="enviar" value="Enviar"><br><br>
-                    <a href="iniciarSesion.php"><label>¿Ya tienes una cuenta con nosotros? Inicia Sesión!</label></a>
+                    <a href="../Sesion/iniciarSesion.php"><label>¿Ya tienes una cuenta con nosotros? Inicia Sesión!</label></a>
                   </fieldset>
                 </form>
               </div>
@@ -63,7 +63,7 @@
     {
       echo '<body>
               <div class="container1">
-                <img class="logo" src="logo.png" alt="Coyo Express">
+                <img class="logo" src="../../statics/img/logo.png" alt="Coyo Express">
               </div>
               <div class="container2">
                 <form action="validacionRegistro.php" method="post">
@@ -76,7 +76,7 @@
                     <label class="datos">Contraseña: </label><input class="inputs" type="password" name="contra" required pattern="(?=.*[A-Z])(?=.*[\.,!@#$&*])(?=.*[0-9])(?=.*[a-z]).{10,}"><br><br>
                     <label class="datos">¡Gracias por preferir Coyo Express!</label><br><br>
                     <input class="enviar" type="submit" name="enviar" value="Enviar"><br><br>
-                    <a href="iniciarSesion.php"><label>¿Ya tienes una cuenta con nosotros? Inicia Sesión!</label></a>
+                    <a href="../Sesion/iniciarSesion.php"><label>¿Ya tienes una cuenta con nosotros? Inicia Sesión!</label></a>
                   </fieldset>
                 </form>
               </div>
@@ -87,7 +87,7 @@
   {
     echo '<body>
             <div class="container1">
-              <img class="logo" src="logo.png" alt="Coyo Express">
+              <img class="logo" src="../../statics/img/logo.png" alt="Coyo Express">
             </div>
             <div class="container2">
               <form style="padding: 24% 0% 0% 10%; " action="registrarse.php" method="post">

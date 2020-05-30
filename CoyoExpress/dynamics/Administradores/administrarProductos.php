@@ -1,17 +1,17 @@
 <?php
-  $accion = (isset($_POST['accion'])) ? $_POST['accion']:"";
+  $accion = (isset($_POST['accion'])) ? $_POST['accion'] : ""; //Ternario
   echo '<!DOCTYPE html>
         <html lang="en" dir="ltr">
           <head>
-            <link rel="stylesheet" href="administradores.css">
-            <link rel="icon" href="prepa6.png">
+            <link rel="stylesheet" href="../../statics/css/administradores.css">
+            <link rel="icon" href="../../statics/img/prepa6.png">
             <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
             <meta charset="utf-8">
             <title>Coyo Express: Productos</title>
           </head>
           <body>';
-  include 'conexion.php';
+  include '../conexion.php';
   if ($conexion)
   {
     $consulta = "SELECT * FROM producto";
@@ -59,13 +59,13 @@
     if ($accion == "Eliminar")
     {
       echo '<form action="eliminarProducto.php" method="post">
-              <label>ID del producto: </label><input type="text" name="idProducto" required ><br><br>
+              <label>ID del producto: </label><input type="text" name="idProducto" required><br><br>
               <input type="submit" name="eliminar" value="Eliminar producto"><br><br>
             </form>';
     }
   }
-  echo "<a href='administradores.php'>Regresar</a>";
-  echo "</body>
-      </html>";
+  echo "<a href='administradores.php'>Regresar</a>
+      </body>
+    </html>";
   mysqli_close($conexion); //Aquí cerramos la conexión con la base de datos (CoyoExpress)
 ?>
