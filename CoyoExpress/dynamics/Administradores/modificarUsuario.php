@@ -10,7 +10,7 @@
 
       if ($modificacion == "idTipo")
       {
-        $sql = "UPDATE usuario SET id_tipo = $modificacion WHERE id_Usuario = '$idUsuario'";
+        $sql = "UPDATE usuario SET id_tipo = $modificacion WHERE id_Usuario IN ($idUsuario)";
         mysqli_query($conexion, $sql);
       }
       if ($modifDatos == "Nombre")
