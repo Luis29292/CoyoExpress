@@ -1,6 +1,6 @@
 <?php
   include '../conexion.php'; //Incluimos "conexion.php" para generar la conexión con la base de datos
-  if (isset($_POST['nombre']) && isset($_POST['precio']) && isset($_POST['imagen']) && isset($_POST['cantidad']) && isset($_POST['idProducto']))
+  if (isset($_POST['nombre']) && isset($_POST['precio']) && isset($_POST['imagen']) && isset($_POST['cantidad']))
   {
     $anteriorProducto = ["Nombre","Precio","Imagen","Cantidad"]; //Aquí guardamos los encabezados (Nombre, Precio, Imagen y Cantidad) de la tabla "producto" de la base de datos en un arreglo
     $modificacion = [ //Aquí guardamos en un arreglo los datos enviados por método "POST" (nombre, precio, imagen y idProducto) que vamos a insertar en la tabla "producto"
@@ -14,7 +14,7 @@
       $idProducto = mysqli_real_escape_string ($conexion , $idProducto);
       for ($i=0; $i < 4; $i++) //Con este "for"
       {
-        $modificacion[$i] = mysqli_real_escape_string ($conexion , $modificacion[$i] );
+        $modificacion[$i] = mysqli_real_escape_string ($conexion , $modificacion[$i]);
         $sql = "UPDATE producto SET $anteriorProducto[$i] = \"$modificacion[$i]\" WHERE id_Producto IN ($idProducto)";
         mysqli_query($conexion, $sql);
       }
@@ -30,8 +30,8 @@
               <body>
                 <label>Producto modificado!</label><br><br>
                 <a href='administrarProductos.php'><label>Regresar</label></a>
-                </body>
-              </html>";
+              </body>
+            </html>";
     }
   }
   mysqli_close($conexion); //Aquí cerramos la conexión con la base de datos (CoyoExpress)

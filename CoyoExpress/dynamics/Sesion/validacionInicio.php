@@ -11,7 +11,7 @@
       $respuesta = mysqli_query($conexion, $consulta); //Primera consulta que realizaremos a la base de datos para verificar si el número de cuenta ingresado ya existe en la base
       $row = mysqli_fetch_array($respuesta); //Con esta función obtenemos en una matriz (asociativa, numérica o ambas) los datos que recibimos de la base
       $concash = hash('sha256', $contrasena);
-      $concash = mysqli_real_escape_string ($conexion , $concash );
+      $concash = mysqli_real_escape_string ($conexion , $concash);
       if ($row == false) //Si la matriz ($row) está vacía...
       {
         //Imprimimos en pantalla un HTML donde se le pide al usuario que primero se registre antes de iniciar sesión o si ya está registrado que ingrese correctamente sus datos

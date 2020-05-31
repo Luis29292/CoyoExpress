@@ -17,13 +17,14 @@
     {
       $consulta = "SELECT * FROM producto";
       $respuesta = mysqli_query($conexion, $consulta);
-      //$row = mysqli_fetch_array($respuesta);
       echo "<table>
-              <th>Nombre</th>
-              <th>Precio</th>
-              <th>Imagen</th>
-              <th>Cantidad disponible</th>
-              <th>ID del producto</th>";
+              <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Cantidad disponible</th>
+                <th>ID del producto</th>
+              </tr>";
       while ($row = mysqli_fetch_array($respuesta))
       {
         echo "<tr>
@@ -54,12 +55,13 @@
     {
       $consulta = "SELECT * FROM usuario";
       $respuesta = mysqli_query($conexion, $consulta);
-      //$row = mysqli_fetch_array($respuesta);
       echo "<table>
-              <th>ID usuario</th>
-              <th>Tipo de usuario</th>
-              <th>Nombre</th>
-              <th>Contraseña</th>";
+              <tr>
+                <th>ID usuario</th>
+                <th>Tipo de usuario</th>
+                <th>Nombre</th>
+                <th>Contraseña</th>
+              </tr>";
       while ($row = mysqli_fetch_array($respuesta))
       {
         echo "<tr>

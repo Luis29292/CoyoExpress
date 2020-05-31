@@ -18,11 +18,13 @@
     $respuesta = mysqli_query($conexion, $consulta);
     $row = mysqli_fetch_array($respuesta);
     echo "<table>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Imagen</th>
-            <th>Cantidad disponible</th>
-            <th>ID del producto</th>";
+            <tr>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Imagen</th>
+              <th>Cantidad disponible</th>
+              <th>ID del producto</th>
+            </tr>";
     while ($row = mysqli_fetch_array($respuesta))
     {
       echo "<tr>
@@ -51,7 +53,7 @@
               <label>Precio: </label><input type="text" name="precio" required ><br><br>
               <label>Imagen: </label><input type="text" name="imagen" required ><br><br>
               <label>Cantidad: </label><input type="text" name="cantidad" required ><br><br>
-              <label>ID del producto: </label><input type="text" name="idProducto" required ><br><br>
+              <label>ID del producto: </label><input type="text" name="idProducto" required><br><br>
               <input type="submit" name="modificar" value="Modificar producto"><br><br>
             </form>';
     }

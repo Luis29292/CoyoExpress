@@ -19,31 +19,35 @@
                     <th>Elegir</th>
                   </tr>';
   include 'conexion.php'; //Incluimos "conexion.php" para generar la conexión con la base de datos
-  $consulta= "SELECT * FROM producto WHERE cantidad > 0";//Agarra todos las carreras
-  $respuesta = mysqli_query($conexion,$consulta);
-  while ($row = mysqli_fetch_array($respuesta))
+  if ($conexion) //Si la conexión con la base de datos fue exitosa
   {
-    echo "<tr>
-            <td>".$row[0]."</td>
-            <td>$".$row[1]."</td>
-            <td><img src='".$row[2]."' width='200' height='200'></td>
-            <td><input type='radio' name='producto' value='".$row[4]."' required></td>
-          </tr>";
+    $consulta = "SELECT * FROM producto WHERE cantidad>0";//Agarra todos las carreras
+    $respuesta = mysqli_query($conexion,$consulta);
+    while ($row = mysqli_fetch_array($respuesta))
+    {
+      echo "<tr>
+              <td>".$row[0]."</td>
+              <td>$".$row[1]."</td>
+              <td><img src='".$row[2]."' width='200' height='200'></td>
+              <td><input type='radio' name='producto' value='".$row[4]."' required></td>
+            </tr>";
+    }
+    echo '</table><br>
+          <label>¿Dónde quires recibir el pedido? </label><select name="direccion">';
+    $consulta2 = "SELECT * FROM Dirección";
+    $respuesta = mysqli_query($conexion,$consulta2);
+    while ($row = mysqli_fetch_array($respuesta))
+    {
+      echo "<option value='".$row[0]."'>".$row[1]."</option>";
+    }
+    echo '</select>
+          <hr>
+          <input type="submit" value="Comprar"><br><br>
+          <a href="principal.php"><label>Regresar</label></a>
+        </center>
+      </form>
+    </body>
+  </html>';
   }
-  echo '</table><br>
-        <label>¿Dónde quires recibir el pedido? </label><select name="direccion">';
-  $consulta2 = "SELECT * FROM Dirección";
-  $respuesta = mysqli_query($conexion,$consulta2);
-  while ($row = mysqli_fetch_array($respuesta))
-  {
-    echo "<option value='".$row[0]."'>".$row[1]."</option>";
-  }
-  echo '</select>
-        <hr>
-        <input type="submit" value="Comprar"><br><br>
-        <a href="principal.php"><label>Regresar</label></a>
-      </center>
-    </form>
-  </body>
-</html>';
+  mysqli_close($conexion); //Aquí cerramos la conexión con la base de datos (CoyoExpress)
 ?>

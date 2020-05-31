@@ -20,8 +20,8 @@
               <body>
                 <label>Producto eliminado!</label><br><br>
                 <a href='administrarProductos.php'><label>Regresar</label></a>
-                </body>
-              </html>";
+              </body>
+            </html>";
     }
   }
   mysqli_close($conexion); //Aquí cerramos la conexión con la base de datos (CoyoExpress)

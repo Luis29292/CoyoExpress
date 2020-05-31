@@ -16,10 +16,12 @@
     $consulta = "SELECT * FROM usuario";
     $respuesta = mysqli_query($conexion, $consulta);
     echo "<table>
-            <th>ID usuario</th>
-            <th>Tipo de usuario</th>
-            <th>Nombre</th>
-            <th>Contraseña</th>";
+            <tr>
+              <th>ID usuario</th>
+              <th>Tipo de usuario</th>
+              <th>Nombre</th>
+              <th>Contraseña</th>
+            </tr>";
     while ($row = mysqli_fetch_array($respuesta))
     {
       echo "<tr>
