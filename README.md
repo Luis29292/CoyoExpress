@@ -4,7 +4,7 @@
 * Luis Antonio Domínguez Ávila
 * María Fernanda Villafán Flores
 * Cortes Garcia Oscar Francisco
-* Francisco Badillo
+* Francisco Badillo Romero
 ## Guía de Instalación
 1. Guardar el respaldo BD_CoyoExpress.sql en C:\xampp\mysql\bin
 2. Crear una base llamada CoyoExpress
