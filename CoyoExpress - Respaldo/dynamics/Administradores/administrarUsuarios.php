@@ -35,7 +35,7 @@
       echo '<form action="modificarUsuario.php" method="post">
               <label>ID del usuario: </label><input type="text" name="idUsuario" required><br><br>
               <select name="modifDatos" required>
-                <option value="Nombre">Nombre del usuario</option>
+                <option value="nombre">Nombre del usuario</option>
                 <option value="idTipo">ID del tipo de usuario</option>
               </select>
               <input type="text" name="modificacion" required><br><br>

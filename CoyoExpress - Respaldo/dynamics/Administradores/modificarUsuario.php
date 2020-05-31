@@ -7,16 +7,15 @@
     $modificacion = $_POST['modificacion'];
     if ($conexion) //Si la conexión con la base de datos fue exitosa
     {
-
       if ($modifDatos == "idTipo")
       {
         $sql = "UPDATE usuario SET id_tipo = $modificacion WHERE id_Usuario IN ($idUsuario)";
         mysqli_query($conexion, $sql);
       }
-      if ($modifDatos == "Nombre")
+      if ($modifDatos == "nombre")
       {
-        $sql = "UPDATE usuario SET Nombre = $modificacion WHERE id_Usuario = '$idUsuario'";
-        mysqli_query($conexion, $sql);
+        $sql2 = "UPDATE usuario SET Nombre = $modificacion WHERE id_Usuario IN ($idUsuario)";
+        mysqli_query($conexion, $sql2);
       }
       echo "<!DOCTYPE html>
               <html lang='en'dir='ltr'>
