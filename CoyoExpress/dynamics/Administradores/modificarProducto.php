@@ -8,11 +8,13 @@
       strip_tags($_POST['precio']),
       strip_tags($_POST['imagen']),
       strip_tags($_POST['cantidad'])];
-      $idProducto = $_POST['idProducto']; //Aquí almancenamos en la variable $idProducto el ID del producto que se ingresó en el formulario
+      $idProducto = strip_tags($_POST['idProducto']); //Aquí almancenamos en la variable $idProducto el ID del producto que se ingresó en el formulario
     if ($conexion) //Si la conexión con la base de datos fue exitosa
     {
+      $idProducto = mysqli_real_escape_string ($conexion , $idProducto);
       for ($i=0; $i < 4; $i++) //Con este "for"
       {
+        $modificacion[$i] = mysqli_real_escape_string ($conexion , $modificacion[$i] );
         $sql = "UPDATE producto SET $anteriorProducto[$i] = \"$modificacion[$i]\" WHERE id_Producto IN ($idProducto)";
         mysqli_query($conexion, $sql);
       }

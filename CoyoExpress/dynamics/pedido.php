@@ -6,6 +6,9 @@ $nC=$_SESSION['numC']; //Sustituir por la sesión!!!!!!
 $producto = $_POST['producto'];
 $direccion = $_POST['direccion'];
 include 'conexion.php'; //Incluimos "conexion.php" para generar la conexión con la base de datos
+$nC = mysqli_real_escape_string ($conexion , $nC );
+$producto = mysqli_real_escape_string ($conexion , $producto );
+$direccion = mysqli_real_escape_string ($conexion , $direccion );
 $pedido = "INSERT INTO pedido (id_usuario, id_Producto, id_Direccion) VALUES ($nC,$producto,$direccion)";
 mysqli_query($conexion, $pedido);
 echo "<!DOCTYPE html>

@@ -3,6 +3,7 @@
   if (isset($_POST['idUsuario'])) {
     $idUsuario = strip_tags($_POST['idUsuario']);
     if ($conexion) {
+      $idUsuario = mysqli_real_escape_string ($conexion , $idUsuario );
       $sql = "DELETE FROM usuario WHERE id_Usuario IN($idUsuario)";
       mysqli_query($conexion, $sql);
       echo "<!DOCTYPE html>

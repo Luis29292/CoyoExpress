@@ -8,6 +8,11 @@
     $cantidad = strip_tags($_POST['cantidad']);
     if ($conexion)
     {
+      $nombre = mysqli_real_escape_string ($conexion , $nombre );
+      $precio = mysqli_real_escape_string ($conexion , $precio );
+      $imagen = mysqli_real_escape_string ($conexion , $imagen );
+      $cantidad = mysqli_real_escape_string ($conexion , $cantidad );
+
       $sql= sprintf("INSERT INTO producto (Nombre, Precio, Imagen, Cantidad) VALUES ('%s', '%d', '%s', '%d')",
                             $nombre,
                             $precio,

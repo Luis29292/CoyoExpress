@@ -7,7 +7,7 @@
     $modificacion = strip_tags($_POST['modificacion']);
     if ($conexion) //Si la conexión con la base de datos fue exitosa
     {
-
+      $idUsuario = mysqli_real_escape_string ($conexion , $idUsuario );
       if ($modifDatos == "idTipo")
       {
         $sql = "UPDATE usuario SET id_tipo = $modificacion WHERE id_Usuario IN ($idUsuario)";

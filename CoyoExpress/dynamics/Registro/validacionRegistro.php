@@ -10,6 +10,11 @@
       $apeMaterno = $_POST['apeMaterno'];
       $contrasena = $_POST['contra'];
       $concash = hash('sha256', $contrasena);
+      $identificador = mysqli_real_escape_string ($conexion , $identificador );
+      $nombre = mysqli_real_escape_string ($conexion , $nombre );
+      $apePaterno = mysqli_real_escape_string ($conexion , $apePaterno);
+      $apeMaterno = mysqli_real_escape_string ($conexion , $apeMaterno );
+      $concash = mysqli_real_escape_string ($conexion , $concash );
       $consulta = "SELECT id_Usuario FROM usuario WHERE id_Usuario IN ($identificador)"; //Almacenamos la consulta que queremos realizar en $consulta
       $respuesta = mysqli_query($conexion, $consulta); //Primera consulta que realizaremos a la base de datos para verificar si el número de cuenta ingresado ya existe en la base
       $row = mysqli_fetch_array($respuesta); //Con esta función obtenemos en una matriz (asociativa, numérica o ambas) los datos que recibimos de la base
