@@ -17,4 +17,4 @@
 ## Resumen de Funcionamiento del Proyecto
 Nuestro proyecto funge como un servicio de comida en la preparatoria. El cliente (ya sea maestro, alumno, o funcionario), podrá hacer pedidos y revisar el historial de estos. El administrador podrá modificar y eliminar usuarios, así como modificar, eliminar y agregar productos. El supervisor podrá ver los pedidos hechos por todos los clientes.
 ## Comentarios Adicionales
-En este proyecto se trabajó con mucha dedicació,n a pesar de los problemas internos como equipo. Se lograron los objetivos que nos planteamos desde un inicio. 
+En este proyecto se trabajó con mucha dedicación a pesar de los problemas internos como equipo. Se lograron los objetivos que nos planteamos desde un inicio. 
