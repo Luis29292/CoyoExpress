@@ -2,12 +2,12 @@
   include '../conexion.php'; //Incluimos "conexion.php" para generar la conexión con la base de datos
   if (isset($_POST['idUsuario']) && isset($_POST['modifDatos']) && isset($_POST['modificacion']))
   {
-    $idUsuario = $_POST['idUsuario'];
-    $modifDatos = $_POST['modifDatos'];
-    $modificacion = $_POST['modificacion'];
+    $idUsuario = strip_tags($_POST['idUsuario']);
+    $modifDatos = strip_tags($_POST['modifDatos']);
+    $modificacion = strip_tags($_POST['modificacion']);
     if ($conexion) //Si la conexión con la base de datos fue exitosa
     {
-
+      $idUsuario = mysqli_real_escape_string ($conexion , $idUsuario );
       if ($modifDatos == "idTipo")
       {
         $sql = "UPDATE usuario SET id_tipo = $modificacion WHERE id_Usuario IN ($idUsuario)";
@@ -15,7 +15,7 @@
       }
       if ($modifDatos == "Nombre")
       {
-        $sql = "UPDATE usuario SET Nombre = $modificacion WHERE id_Usuario = '$idUsuario'";
+        $sql = "UPDATE usuario SET Nombre = \"$modificacion\" WHERE id_Usuario IN ($idUsuario)";
         mysqli_query($conexion, $sql);
       }
       echo "<!DOCTYPE html>

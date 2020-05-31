@@ -2,9 +2,10 @@
   include '../conexion.php'; //Incluimos "conexion.php" para generar la conexión con la base de datos
   if (isset($_POST['idProducto']))
   {
-    $idProducto = $_POST['idProducto'];
+    $idProducto = strip_tags($_POST['idProducto']);
     if ($conexion)
     {
+      $idProducto = mysqli_real_escape_string ($conexion , $idProducto );
       $sql= "DELETE FROM producto WHERE id_Producto = '$idProducto'";
       mysqli_query($conexion, $sql);
       echo "<!DOCTYPE html>

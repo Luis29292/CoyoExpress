@@ -7,6 +7,7 @@ echo '<!DOCTYPE html>
         </head>
         <body>
           <a href="pedidosGen.php">Pedidos</a><br><br>
+          <a href="../cerrarSesion.php">Cerrar Sesión</a>
         </body>
       </html>';
 ?>

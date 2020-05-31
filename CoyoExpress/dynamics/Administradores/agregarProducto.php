@@ -2,12 +2,17 @@
   include '../conexion.php';
   if (isset($_POST['nombre']) && isset($_POST['precio']) && isset($_POST['imagen']) && isset($_POST['cantidad']))
   {
-    $nombre = $_POST['nombre'];
-    $precio = $_POST['precio'];
-    $imagen = $_POST['imagen'];
-    $cantidad = $_POST['cantidad'];
+    $nombre = strip_tags($_POST['nombre']);
+    $precio = strip_tags($_POST['precio']);
+    $imagen = strip_tags($_POST['imagen']);
+    $cantidad = strip_tags($_POST['cantidad']);
     if ($conexion)
     {
+      $nombre = mysqli_real_escape_string ($conexion , $nombre );
+      $precio = mysqli_real_escape_string ($conexion , $precio );
+      $imagen = mysqli_real_escape_string ($conexion , $imagen );
+      $cantidad = mysqli_real_escape_string ($conexion , $cantidad );
+
       $sql= sprintf("INSERT INTO producto (Nombre, Precio, Imagen, Cantidad) VALUES ('%s', '%d', '%s', '%d')",
                             $nombre,
                             $precio,
