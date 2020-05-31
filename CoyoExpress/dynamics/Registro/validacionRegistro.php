@@ -5,10 +5,10 @@
     if (isset($_POST['identificador']) && isset($_POST['nombre']) && isset($_POST['apePaterno']) && isset($_POST['apeMaterno']) && isset($_POST['contra'])) //Verificamos que estén definidos (que no sean NULL) los datos enviados en el formulario
     {
       $identificador = $_POST['identificador']; //Asignamos los datos enviados en las variables ($identificador, $nombre, $apePaterno, $apeMaterno, $contrasena)
-      $nombre = $_POST['nombre'];
-      $apePaterno = $_POST['apePaterno'];
-      $apeMaterno = $_POST['apeMaterno'];
-      $contrasena = $_POST['contra'];
+      $nombre = strip_tags($_POST['nombre']);
+      $apePaterno = strip_tags($_POST['apePaterno']);
+      $apeMaterno = strip_tags($_POST['apeMaterno']);
+      $contrasena = strip_tags($_POST['contra']);
       $concash = hash('sha256', $contrasena);
       $identificador = mysqli_real_escape_string ($conexion , $identificador );
       $nombre = mysqli_real_escape_string ($conexion , $nombre );
