@@ -9,7 +9,7 @@
             <title>Coyo Express: Pedidos</title>
           </head>
           <body>
-            <table>
+            <table border="1">
               <tr>
                 <th>id Pedido</th>
                 <th>Nombre</th>
