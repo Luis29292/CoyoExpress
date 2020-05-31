@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Coyo-express</title>
     <link rel="shortcut icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="../statics/css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
 </head>
 
@@ -16,7 +16,7 @@
         <nav>
             <a href="#Somoscoyotes">Inicio</a>
             <a href="#Alimentos">Acerca de alimentos</a>
-            <a href="Pedidos.php"
+            <a href="./Sesion/iniciarSesion.php"
             >Ingreso</a>
             <a href="#Servicios">Servicios</a>
             <a href="#Contacto">Contacto</a>
@@ -35,7 +35,7 @@
         <section class="contenedor sobre-nosotros">
             <h2 class="titulo" id="Somoscoyotes">Somos coyotes</h2>
             <div class="contenedor-sobre-nosotros">
-                <img src="img/p6.jpg" alt="" class="imagen-about-us">
+                <img src="../statics/img/p6.jpg" alt="" class="imagen-about-us">
                 <div class="contenido-textos">
                     <h3><span>1</span>Propositos</h3>
                     <p>Esta pagina web tiene la finalidad de funcionar como un sistema de pedidos de comidad de la cafeteria de la ENP No.6 "Antonio Caso"
@@ -53,58 +53,58 @@
                 <h2 class="titulo" id="Alimentos">Ejemplos de Alimentos</h2>
                 <div class="galeria-port">
                     <div class="imagen-port">
-                        <img src="img/cafe.jpg" alt="">
+                        <img src="../statics/img/cafe.jpg" alt="">
                         <div class="hover-galeria">
                             <img src="img/Escudo.jpg" alt="">
                             <p>Productos</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/cuernitos.png" alt="">
+                        <img src="../statics/img/cuernitos.png" alt="">
                         <div class="hover-galeria">
-                            <img src="img/Escudo.jpg" alt="">
+                            <img src="../statics/img/Escudo.jpg" alt="">
                             <p>Productos</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/lechitas.jpg" alt="">
+                        <img src="../statics/img/lechitas.jpg" alt="">
                         <div class="hover-galeria">
-                            <img src="img/Escudo.jpg" alt="">
+                            <img src="../statics/img/Escudo.jpg" alt="">
                             <p>Productos</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/galletas.jpg" alt="">
+                        <img src="../statics/img/galletas.jpg" alt="">
                         <div class="hover-galeria">
-                            <img src="img/Escudo.jpg" alt="">
+                            <img src="../statics/img/Escudo.jpg" alt="">
                             <p>Productos</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/sandwich.jpg" alt="">
+                        <img src="../statics/img/sandwich.jpg" alt="">
                         <div class="hover-galeria">
-                            <img src="img/Escudo.jpg" alt="">
+                            <img src="../statics/img/Escudo.jpg" alt="">
                             <p>Productos</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/papas.jpg" alt="">
+                        <img src="../statics/img/papas.jpg" alt="">
                         <div class="hover-galeria">
-                            <img src="img/Escudo.jpg" alt="">
+                            <img src="../statics/img/Escudo.jpg" alt="">
                             <p>Productos</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/jugo.jpg" alt="">
+                        <img src="../statics/img/jugo.jpg" alt="">
                         <div class="hover-galeria">
-                            <img src="img/Escudo.jpg" alt="">
+                            <img src="../statics/img/Escudo.jpg" alt="">
                             <p>Productos</p>
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/yakult.jpg" alt="">
+                        <img src="../statics/img/yakult.jpg" alt="">
                         <div class="hover-galeria">
-                            <img src="img/Escudo.jpg" alt="">
+                            <img src="../statics/img/Escudo.jpg" alt="">
                             <p>Productos</p>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
             <h2 class="titulo">Que dicen nuestros clientes</h2>
             <div class="cards">
                 <div class="card">
-                    <img src="img/chavo.jpg" alt="">
+                    <img src="../statics/img/chavo.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Ernesto de la Cruz Hernandez</h4>
                         <p>Me ha facilitado bastante, cuando tengo clases juntas y no tengo la disponibilidad de salir se convierte en la herrmienta perfecta.
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="img/chava.jpg" alt="">
+                    <img src="../statics/img/chava.jpg" alt="">
                     <div class="contenido-texto-card">
                         <h4>Juanita </h4>
                         <p>Antes creia que era una perdida de tiempo, yo podia ir facil a comprar, sin embargo una vez me salvo, no habia desayunado, tenia examen
@@ -138,18 +138,18 @@
                 <h2 class="titulo" id="Servicios">Nuestros servicios</h2>
                 <div class="servicio-cont">
                     <div class="servicio-ind">
-                        <img src="img/UNAM.png" alt="">
+                        <img src="../statics/img/UNAM.png" alt="">
                         <h3>UNAM</h3>
                         <p>Somos na empresa perteneciente a la UNAM sin fines de lucro que busca innovar en muchos sentidos
                         para poder seguir siendo una gran comunidad y tanto los docentes como el alumnado pueda rendir en el dia a dia</p>
                     </div>
                     <div class="servicio-ind">
-                        <img src="img/logo.png" alt="">
+                        <img src="../statics/img/logo.png" alt="">
                         <h3>Nuestra empresa</h3>
                         <p>Nuestra compañia sirve principalmente a la Universidad y a sus instituciones en esta ocasión en especifico a la ENP6. <br> Somos una empresa que se dedica a la innovación buscando soluciones factibles.</p>
                     </div>
                     <div class="servicio-ind">
-                        <img src="img/prepa6.png" alt="">
+                        <img src="../statics/img/prepa6.png" alt="">
                         <h3>Escuela Nacional Preparatoria No.6</h3>
                         <p>Somos alumnos pertenecientes de este plantel, en esta ocasión estamos sirviendo para este pero el proposito es expandir a nuevos horizontes.</p>
                     </div>
