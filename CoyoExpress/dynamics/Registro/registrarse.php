@@ -27,7 +27,7 @@
                     <label class="datos">Nombre: </label><input class="inputs" type="text" name="nombre" pattern="([A-ZÁÉÍÓÚÑ][a-záéíóúñ]*\s?){1,}" required title="El nombre(s) debe empezar en mayúscula y continuar en minúscula"><br><br>
                     <label class="datos">Apellido Paterno: </label><input class="inputs" type="text" name="apePaterno" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]*" required title="El Apellido debe empezar en mayúscula y terminar en minúscula"><br><br>
                     <label class="datos">Apellido Materno: </label><input class="inputs" type="text" name="apeMaterno" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]*" required title="El Apellido debe empezar en mayúscula y terminar en minúscula"><br><br>
-                    <label class="datos">Contraseña: </label><input class="inputs" type="password" name="contra" required pattern="(?=.*[A-Z])(?=.*[\.,!@#$&*])(?=.*[0-9])(?=.*[a-z]).{10,}"><br><br>
+                    <label class="datos">Contraseña: </label><input class="inputs" type="password" name="contra" required pattern="(?=.*[A-Z])(?=.*[\.,!@#$&*])(?=.*[0-9])(?=.*[a-z]).{10,}" title="La contraseña debe tener 1 mayúscula, 1 minúscula, 1 carácter, y de 10 de longitud"><br><br>
                     <label class="datos">¡Gracias por preferir Coyo Express!</label><br><br>
                     <input class="enviar" type="submit" name="enviar" value="Enviar"><br><br>
                     <a href="../Sesion/iniciarSesion.php"><label>¿Ya tienes una cuenta con nosotros? Inicia Sesión!</label></a>
