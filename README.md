@@ -1,8 +1,8 @@
 # CoyoExpress
 ## Equipo Maravilla
 ## Integrantes:
-##### Luis Antonio Domínguez Ávila
-##### María Fernanda Villafán Flores
+* Luis Antonio Domínguez Ávila
+* María Fernanda Villafán Flores
 * Cortes Garcia Oscar Francisco
 * Francisco Badillo
 ## Guía de Instalación
