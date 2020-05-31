@@ -2,7 +2,7 @@
   include '../conexion.php'; //Incluimos "conexion.php" para generar la conexión con la base de datos
   if (isset($_POST['idProducto']))
   {
-    $idProducto = $_POST['idProducto'];
+    $idProducto = strip_tags($_POST['idProducto']);
     if ($conexion)
     {
       $sql= "DELETE FROM producto WHERE id_Producto = '$idProducto'";

@@ -4,10 +4,10 @@
   {
     $anteriorProducto = ["Nombre","Precio","Imagen","Cantidad"]; //Aquí guardamos los encabezados (Nombre, Precio, Imagen y Cantidad) de la tabla "producto" de la base de datos en un arreglo
     $modificacion = [ //Aquí guardamos en un arreglo los datos enviados por método "POST" (nombre, precio, imagen y idProducto) que vamos a insertar en la tabla "producto"
-      $_POST['nombre'],
-      $_POST['precio'],
-      $_POST['imagen'],
-      $_POST['cantidad']];
+      strip_tags($_POST['nombre']),
+      strip_tags($_POST['precio']),
+      strip_tags($_POST['imagen']),
+      strip_tags($_POST['cantidad'])];
       $idProducto = $_POST['idProducto']; //Aquí almancenamos en la variable $idProducto el ID del producto que se ingresó en el formulario
     if ($conexion) //Si la conexión con la base de datos fue exitosa
     {

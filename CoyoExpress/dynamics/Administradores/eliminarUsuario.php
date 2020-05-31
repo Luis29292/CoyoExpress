@@ -1,9 +1,9 @@
 <?php
   include '../conexion.php';
   if (isset($_POST['idUsuario'])) {
-    $idUsuario = $_POST['idUsuario'];
+    $idUsuario = strip_tags($_POST['idUsuario']);
     if ($conexion) {
-      $sql = "DELETE FROM usuario WHERE id_Usuario = '$idUsuario'";
+      $sql = "DELETE FROM usuario WHERE id_Usuario IN($idUsuario)";
       mysqli_query($conexion, $sql);
       echo "<!DOCTYPE html>
             <html lang='en'dir='ltr'>
@@ -16,7 +16,7 @@
               </head>
               <body>
                 <label>Usuario eliminado!</label><br><br>
-                <a href='administrarProductos.php'><label>Regresar</label></a>
+                <a href='administrarUsuarios.php'><label>Regresar</label></a>
                 </body>
               </html>";
     }
