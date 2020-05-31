@@ -12,7 +12,7 @@
           </head>';
   if (isset($_POST['tipoUsu'])) //Verificamos que esté definido (que no sea NULL) el tipo de usuario enviado en el formulario
   {
-    $tipoUsu = $_POST['tipoUsu']; //Almacenamos en $tipoUsu el tipo de usuario que se seleccionó
+    $tipoUsu = strip_tags($_POST['tipoUsu']); //Almacenamos en $tipoUsu el tipo de usuario que se seleccionó
     if ($tipoUsu == "Alumno") //Si el usuario es un alumno, imprimimos en pantalla su respetivo formulario
     {
       echo '<body>
