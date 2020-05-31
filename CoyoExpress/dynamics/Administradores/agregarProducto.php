@@ -2,13 +2,13 @@
   include '../conexion.php';
   if (isset($_POST['nombre']) && isset($_POST['precio']) && isset($_POST['imagen']) && isset($_POST['cantidad']))
   {
-    $nombre = strip_tags($_POST['nombre']);
+    $nombre = strip_tags($_POST['nombre']);//Le arranca las etiquetas para evitar inyecciones
     $precio = strip_tags($_POST['precio']);
     $imagen = strip_tags($_POST['imagen']);
     $cantidad = strip_tags($_POST['cantidad']);
     if ($conexion)
     {
-      $nombre = mysqli_real_escape_string ($conexion , $nombre );
+      $nombre = mysqli_real_escape_string ($conexion , $nombre );//Lo convierte para seguridad de la base de datos
       $precio = mysqli_real_escape_string ($conexion , $precio );
       $imagen = mysqli_real_escape_string ($conexion , $imagen );
       $cantidad = mysqli_real_escape_string ($conexion , $cantidad );

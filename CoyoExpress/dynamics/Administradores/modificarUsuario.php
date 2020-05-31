@@ -10,12 +10,12 @@
       $idUsuario = mysqli_real_escape_string ($conexion , $idUsuario );
       if ($modifDatos == "idTipo")
       {
-        $sql = "UPDATE usuario SET id_tipo = $modificacion WHERE id_Usuario IN ($idUsuario)";
+        $sql = "UPDATE usuario SET id_tipo = $modificacion WHERE id_Usuario IN ($idUsuario)";//Modifica el tipo de usuario
         mysqli_query($conexion, $sql);
       }
       if ($modifDatos == "Nombre")
       {
-        $sql = "UPDATE usuario SET Nombre = \"$modificacion\" WHERE id_Usuario IN ($idUsuario)";
+        $sql = "UPDATE usuario SET Nombre = \"$modificacion\" WHERE id_Usuario IN ($idUsuario)";//Modifica el nombre del usuario
         mysqli_query($conexion, $sql);
       }
       echo "<!DOCTYPE html>

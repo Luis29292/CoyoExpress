@@ -9,8 +9,8 @@
       $apePaterno = strip_tags($_POST['apePaterno']);
       $apeMaterno = strip_tags($_POST['apeMaterno']);
       $contrasena = strip_tags($_POST['contra']);
-      $concash = hash('sha256', $contrasena);
-      $identificador = mysqli_real_escape_string ($conexion , $identificador );
+      $concash = hash('sha256', $contrasena);//Hashea la contraseña
+      $identificador = mysqli_real_escape_string ($conexion , $identificador );//Lo hace seguro para la base de datos
       $nombre = mysqli_real_escape_string ($conexion , $nombre );
       $apePaterno = mysqli_real_escape_string ($conexion , $apePaterno);
       $apeMaterno = mysqli_real_escape_string ($conexion , $apeMaterno );

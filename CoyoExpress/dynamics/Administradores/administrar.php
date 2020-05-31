@@ -25,7 +25,7 @@
                 <th>Cantidad disponible</th>
                 <th>ID del producto</th>
               </tr>";
-      while ($row = mysqli_fetch_array($respuesta))
+      while ($row = mysqli_fetch_array($respuesta))//Nos muestra los productos disponibles y más información
       {
         echo "<tr>
                 <td>".$row[0]."</td>
@@ -62,7 +62,7 @@
                 <th>Nombre</th>
                 <th>Contraseña</th>
               </tr>";
-      while ($row = mysqli_fetch_array($respuesta))
+      while ($row = mysqli_fetch_array($respuesta))//Muestra todos los usuarios y su tipo
       {
         echo "<tr>
                 <td>".$row[0]."</td>

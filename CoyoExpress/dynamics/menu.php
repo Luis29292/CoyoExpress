@@ -23,7 +23,7 @@
   {
     $consulta = "SELECT * FROM producto WHERE cantidad>0";//Agarra todos las carreras
     $respuesta = mysqli_query($conexion,$consulta);
-    while ($row = mysqli_fetch_array($respuesta))
+    while ($row = mysqli_fetch_array($respuesta))//Muestra los elementos del menú que estén disponibles
     {
       echo "<tr>
               <td>".$row[0]."</td>
@@ -36,7 +36,7 @@
           <label>¿Dónde quires recibir el pedido? </label><select name="direccion">';
     $consulta2 = "SELECT * FROM Dirección";
     $respuesta = mysqli_query($conexion,$consulta2);
-    while ($row = mysqli_fetch_array($respuesta))
+    while ($row = mysqli_fetch_array($respuesta))//Da la opción de elegir 1 producto del menú
     {
       echo "<option value='".$row[0]."'>".$row[1]."</option>";
     }

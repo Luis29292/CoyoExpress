@@ -20,9 +20,9 @@
   include '../conexion.php'; //Incluimos "conexion.php" para generar la conexión con la base de datos
   if ($conexion) //Si la conexión con la base de datos fue exitosa
   {
-    $consulta = "SELECT * FROM pedido LEFT JOIN usuario ON pedido.id_usuario = usuario.id_usuario LEFT JOIN producto ON pedido.id_Producto=producto.id_Producto LEFT JOIN Dirección ON pedido.id_Direccion = Dirección.id_Dirección";
+    $consulta = "SELECT * FROM pedido LEFT JOIN usuario ON pedido.id_usuario = usuario.id_usuario LEFT JOIN producto ON pedido.id_Producto=producto.id_Producto LEFT JOIN Dirección ON pedido.id_Direccion = Dirección.id_Dirección";//Toma los nombres para poder mostrarlos en vez de los id.
     $respuesta= mysqli_query($conexion,$consulta);
-    while ($row = mysqli_fetch_array($respuesta))
+    while ($row = mysqli_fetch_array($respuesta))//Muestra los pedidos hechos
     {
       echo "<tr>
               <td>".$row[0]."</td>

@@ -25,7 +25,7 @@
               <th>Cantidad disponible</th>
               <th>ID del producto</th>
             </tr>";
-    while ($row = mysqli_fetch_array($respuesta))
+    while ($row = mysqli_fetch_array($respuesta))//Nos muestra los productos
     {
       echo "<tr>
               <td>".$row[0]."</td>

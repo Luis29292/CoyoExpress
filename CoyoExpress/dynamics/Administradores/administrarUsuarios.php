@@ -22,7 +22,7 @@
               <th>Nombre</th>
               <th>Contraseña</th>
             </tr>";
-    while ($row = mysqli_fetch_array($respuesta))
+    while ($row = mysqli_fetch_array($respuesta))//Nos muestra los usuarios
     {
       echo "<tr>
               <td>".$row[0]."</td>

@@ -24,9 +24,9 @@
   if ($conexion)
   {
     $numC = mysqli_real_escape_string ($conexion , $numC);
-    $consulta = "SELECT * FROM pedido LEFT JOIN producto ON pedido.id_Producto=producto.id_Producto LEFT JOIN Dirección ON pedido.id_Direccion = Dirección.id_Dirección WHERE id_usuario IN ($numC)";
+    $consulta = "SELECT * FROM pedido LEFT JOIN producto ON pedido.id_Producto=producto.id_Producto LEFT JOIN Dirección ON pedido.id_Direccion = Dirección.id_Dirección WHERE id_usuario IN ($numC)"; //Muestra los nombres en vez de los id
     $respuesta= mysqli_query($conexion,$consulta);
-    while ($row = mysqli_fetch_array($respuesta))
+    while ($row = mysqli_fetch_array($respuesta))//Muestra los pedidos hechos por el cliente
     {
       echo "<tr>
               <td>".$row[0]."</td>
